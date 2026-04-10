@@ -30,7 +30,7 @@
           "name": "layout-customizer-demo.gif",
           "type": "image",
           "order": 100,
-          "url": "https://github.com/saiiiiiii/js-application-layout-customizer/raw/main/assets/layout-customizer-demo.gif",
+          "url": "https://github.com/pnp/sp-dev-fx-extensions/raw/main/samples/js-application-layout-customizer/assets/layout-customizer-demo.gif",
           "alt": "SharePoint Page Layout Customizer"
         }
       ],
