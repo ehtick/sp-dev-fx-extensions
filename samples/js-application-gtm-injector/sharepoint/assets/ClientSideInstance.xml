@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="GtmInjector"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="b0413a9d-489c-4053-8cc9-403a101e9b55"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>

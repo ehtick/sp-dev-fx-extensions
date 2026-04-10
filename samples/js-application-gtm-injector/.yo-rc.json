@@ -1,0 +1,20 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.0",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "gtm-tracker",
+    "libraryId": "1bebcb20-2e53-41a2-9f5c-cba42eec94fe",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "gtm-tracker",
+    "solutionShortDescription": "gtm-tracker description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}

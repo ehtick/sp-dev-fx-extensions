@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "gtm-injector-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/gtmInjector/GtmInjectorApplicationCustomizer.js",
+          "manifest": "./src/extensions/gtmInjector/GtmInjectorApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GtmInjectorApplicationCustomizerStrings": "lib/extensions/gtmInjector/loc/{locale}.js"
+  }
+}

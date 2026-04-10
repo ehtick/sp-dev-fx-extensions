@@ -1,0 +1,78 @@
+[
+    {
+      "name": "pnp-sp-dev-spfx-extensions-js-application-gtm-injector",
+      "source": "pnp",
+      "title": "Google Tag Manager Injector",
+      "shortDescription": "A SharePoint Framework (SPFx) Application Customizer that injects Google Tag Manager (GTM) into SharePoint Modern pages with full SPA navigation tracking support, built to be compliant with SharePoint Online Content Security Policy (CSP) enforcement.",
+      "url": "https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/js-application-gtm-injector",
+      "downloadUrl": "https://pnp.github.io/download-partial/?url=https://github.com/pnp/sp-dev-fx-extensions/tree/main/samples/js-application-gtm-injector",
+      "longDescription": [
+        "A SharePoint Framework (SPFx) Application Customizer that injects Google Tag Manager (GTM) into SharePoint Modern pages. Initializes the standard GTM dataLayer, loads the GTM script via SPComponentLoader, and hooks into SharePoint's navigation events to track Single Page Application (SPA) route changes — ensuring every page view is captured without a full browser reload.",
+        "Built to be compliant with the SharePoint Online Content Security Policy (CSP) enforcement introduced in March 2026. Because GTM is loaded dynamically at runtime via SPComponentLoader.loadScript(), https://www.googletagmanager.com must be manually registered as a Trusted Script Source in the SharePoint Admin Center before deployment."
+      ],
+      "creationDateTime": "2026-04-10",
+      "updateDateTime": "2026-04-10",
+      "products": [
+        "SharePoint",
+        "Office"
+      ],
+      "metadata": [
+        {
+          "key": "CLIENT-SIDE-DEV",
+          "value": "TypeScript"
+        },
+        {
+          "key": "SPFX-VERSION",
+          "value": "1.22.2"
+        }
+      ],
+      "thumbnails": [
+        {
+            "name": "gtm-injector-demo.png",
+            "type": "image",
+            "order": 101,
+            "url": "https://github.com/pnp/sp-dev-fx-extensions/raw/main/samples/js-application-gtm-injector/assets/gtm-injector-demo.png",
+            "alt": "Google Tag Manager"
+          }
+      ],
+      "authors": [
+        {
+          "gitHubAccount": "saiiiiiii",
+          "pictureUrl": "https://avatars.githubusercontent.com/u/46020510?v=4",
+          "name": "Sai Siva Ram Bandaru"
+        }
+      ],
+      "references": [
+        {
+          "name": "Getting started with SharePoint Framework",
+          "description": "Introduction about how to develop Microsoft 365 extensions using SharePoint Framework.",
+          "url": "https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant"
+        },
+        {
+          "name": "Build your first SharePoint Framework Extension",
+          "description": "Learn how to build your first SharePoint Framework Application Customizer.",
+          "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension"
+        },
+        {
+          "name": "Support for Content Security Policy (CSP) in SharePoint Online",
+          "description": "Learn how CSP works with SPFx solutions, how to identify violations, and how to configure trusted sources in SharePoint Online.",
+          "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/content-securty-policy-trusted-script-sources"
+        },
+        {
+          "name": "SharePoint Online CSP Enforcement Dates and Guidance",
+          "description": "Microsoft Community Hub post detailing CSP enforcement timelines and what SPFx developers need to do to prepare.",
+          "url": "https://techcommunity.microsoft.com/blog/spblog/sharepoint-online-content-security-policy-csp-enforcement-dates-and-guidance/4472662"
+        },
+        {
+          "name": "Google Tag Manager Developer Quickstart",
+          "description": "Official Google documentation for implementing Google Tag Manager on your website.",
+          "url": "https://developers.google.com/tag-platform/tag-manager/web"
+        },
+        {
+          "name": "Microsoft 365 Patterns and Practices",
+          "description": "Guidance, tooling, samples and open-source controls for your Microsoft 365 development.",
+          "url": "https://aka.ms/m365pnp"
+        }
+      ]
+    }
+  ]
