@@ -8,9 +8,24 @@ Built to be compliant with the **SharePoint Online Content Security Policy (CSP)
 
 ![GTM Injector in action](./assets/gtm-injector-demo.png)
 
-## Used SharePoint Framework Version
+## Compatibility
 
-![version](https://img.shields.io/badge/version-1.22.2-green.svg)
+| :warning: Important          |
+|:---------------------------|
+| Every SPFx version is optimally compatible with specific versions of Node.js. In order to be able to Toolchain this sample, you need to ensure that the version of Node on your workstation matches one of the versions listed in this section. This sample will not work on a different version of Node.|
+|Refer to <https://aka.ms/spfx-matrix> for more information on SPFx compatibility.   |
+
+This sample is optimally compatible with the following environment configuration:
+
+![SPFx 1.22.2](https://img.shields.io/badge/SPFx-1.22.2-green.svg)
+![Node.js v22](https://img.shields.io/badge/Node.js-v22-green.svg)
+![Toolchain: Heft](https://img.shields.io/badge/Toolchain-Heft-green.svg)
+![Compatible with SharePoint Online](https://img.shields.io/badge/SharePoint%20Online-Compatible-green.svg)
+![Does not work with SharePoint 2019](https://img.shields.io/badge/SharePoint%20Server%202019-Incompatible-red.svg "SharePoint Server 2019 requires SPFx 1.4.1 or lower")
+![Does not work with SharePoint 2016 (Feature Pack 2)](https://img.shields.io/badge/SharePoint%20Server%202016%20(Feature%20Pack%202)-Incompatible-red.svg "SharePoint Server 2016 Feature Pack 2 requires SPFx 1.1")
+![Local Workbench Unsupported](https://img.shields.io/badge/Local%20Workbench-Unsupported-red.svg "Local workbench is no longer available as of SPFx 1.13 and above")
+![Hosted Workbench Compatible](https://img.shields.io/badge/Hosted%20Workbench-Compatible-green.svg)
+![Compatible with Remote Containers](https://img.shields.io/badge/Remote%20Containers-Compatible-green.svg)
 
 ## Applies to
 
@@ -27,7 +42,7 @@ Built to be compliant with the **SharePoint Online Content Security Policy (CSP)
 
 ### ⚠️ Required: CSP Trusted Script Source Registration
 
-SharePoint Online enforces [Content Security Policy (CSP)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/content-securty-policy-trusted-script-sources) on all Modern pages from **March 1, 2026** onwards. This solution uses `SPComponentLoader.loadScript()` to load GTM dynamically at runtime — SharePoint does **not** auto-trust sources loaded this way, so you must register the GTM domain manually.
+SharePoint Online enforces [Content Security Policy (CSP)](https://learn.microsoft.com/sharepoint/dev/spfx/content-securty-policy-trusted-script-sources) on all Modern pages from **March 1, 2026** onwards. This solution uses `SPComponentLoader.loadScript()` to load GTM dynamically at runtime — SharePoint does **not** auto-trust sources loaded this way, so you must register the GTM domain manually.
 
 **Via SharePoint Admin Center:**
 
@@ -40,11 +55,9 @@ SharePoint Online enforces [Content Security Policy (CSP)](https://learn.microso
 **Verify:** Load a Modern page with the solution active and append `?csp=enforce` to the URL. Open DevTools (F12) → Console. No `Content Security Policy` violations means the configuration is correct.
 
 
-## Solution
+## Contributors
 
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| js-application-gtm-injector | [@saiiiiiii](https://github.com/saiiiiiii) |
+- [@saiiiiiii](https://github.com/saiiiiiii) |
 
 ## Version history
 
@@ -62,9 +75,11 @@ SharePoint Online enforces [Content Security Policy (CSP)](https://learn.microso
 
 - Clone this repository
 - Update your GTM Container ID in `src/extensions/gtmInjector/GtmInjectorApplicationCustomizer.ts`:
+  
   ```typescript
   const GTM_ID: string = 'GTM-XXXXXXX'; // Replace with your GTM Container ID
   ```
+
 - Ensure that you are at the solution folder
 - In the command-line run:
   - `npm install -g @rushstack/heft`
@@ -103,10 +118,10 @@ This extension illustrates the following concepts:
 ## References
 
 - [Getting started with SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Support for Content Security Policy (CSP) in SharePoint Online](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/content-securty-policy-trusted-script-sources)
+- [Support for Content Security Policy (CSP) in SharePoint Online](https://learn.microsoft.com/sharepoint/dev/spfx/content-securty-policy-trusted-script-sources)
 - [SharePoint Online CSP Enforcement Dates and Guidance](https://techcommunity.microsoft.com/blog/spblog/sharepoint-online-content-security-policy-csp-enforcement-dates-and-guidance/4472662)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/sharepoint/dev/spfx/publish-to-marketplace-overview)
+- [Use Microsoft Graph in your solution](https://learn.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
+- [Publish SharePoint Framework applications to the Marketplace](https://learn.microsoft.com/sharepoint/dev/spfx/publish-to-marketplace-overview)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
 - [Google Tag Manager — Developer Quickstart](https://developers.google.com/tag-platform/tag-manager/web)
 - [Heft Documentation](https://heft.rushstack.io/)
